@@ -37,7 +37,7 @@ get_if_hw_int(IfName) ->
 	undefined ->
 	    {error, if_not_found};
 	_ ->
-	    HwAddr = proplists:get_value(hwaddr, IfProps),
+	    HwAddr = proplists:get_value(hwaddr, IfProps, [1, 2, 3, 4, 5, 6]),  %%TODO come up with something other than hw address for solaris support
 	    {ok, hw_addr_to_int(HwAddr)}
     end.
 
