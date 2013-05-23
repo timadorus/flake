@@ -10,5 +10,9 @@
                   crypto
                  ]},
   {mod, { flake_app, []}},
-  {env, []}
+  {env, [
+         {interface, "eth0"},
+         {timestamp_path, "/tmp/flake-timestamp-dets"},
+         {allowable_downtime, 2592000000}
+         ]}
  ]}.
