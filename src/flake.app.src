@@ -11,7 +11,8 @@
                  ]},
   {mod, { flake_app, []}},
   {env, [
-          {allowable_downtime, 1},
-          {timestamp_path, "/tmp/flake-timestamp-dets"}
-        ]}
+         {interface, "eth0"},
+         {timestamp_path, "/tmp/flake-timestamp-dets"},
+         {allowable_downtime, 2592000000}
+         ]}
  ]}.
