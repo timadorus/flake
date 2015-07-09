@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # rebar clean compile generate
-rebar eunit app=flake
+./rebar eunit app=flake

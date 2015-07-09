@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rebar get-deps clean compile generate && ./rel/flake/bin/flake
+./rebar get-deps clean compile && erl -pa ebin -pa deps/*/ebin -s flake

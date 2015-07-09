@@ -39,7 +39,7 @@ start_link() ->
 %% @spec start() -> ok
 %% @doc Start the snowflake server.
 start() ->
-    application:start(flake).
+    application:ensure_all_started(flake).
 
 %% @spec stop() -> ok
 %% @doc Stop the snowflake server.
