@@ -24,6 +24,7 @@
 	 start/0,
 	 start_link/0,
 	 stop/0,
+	 get_config_value/1,
 	 get_config_value/2
 	]).
 
@@ -46,6 +47,9 @@ start() ->
 stop() ->
     Res = application:stop(flake),
     Res.
+
+get_config_value(Key) ->
+	get_config_value(Key, undefined).
 
 get_config_value(Key, Default) ->
     case application:get_env(flake, Key) of
