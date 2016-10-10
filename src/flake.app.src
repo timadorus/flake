@@ -11,7 +11,9 @@
                  ]},
   {mod, { flake_app, []}},
   {env, [
-         {interface, "eth0"},
+  %% Do not set an interface here, as this will deactivate the automatic
+  %% lookup for a valid interface. Only use to force a specific interface.
+  %%     {interface, "eth0"},
          {timestamp_path, "/tmp/flake-timestamp-dets"},
          {allowable_downtime, 2592000000}
          ]}
